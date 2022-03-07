@@ -83,9 +83,33 @@ select {
   border-radius: 4rem;
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2);
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   height: 62.7rem;
   width: 46.6rem;
   position: relative;
   z-index: 1;
+
+  &__avatar {
+    background-color: $snow;
+    border-radius: 100%;
+    display: flex;
+    margin: auto;
+    height: 18rem;
+    width: 18rem;
+    position: relative;
+    &-pic {
+      background-image: url("./assets/mrs-pic.png");
+      background-repeat: no-repeat;
+      background-size: 110%;
+      background-position: center;
+      clip-path: ellipse(9.2rem 11rem at 9rem 9rem);
+      position: absolute;
+      top: -2.4rem;
+      left: 0;
+      height: 20rem;
+      width: 20rem;
+    }
+  }
 }
