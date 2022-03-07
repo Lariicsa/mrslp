@@ -52,14 +52,40 @@ select {
 }
 
 .space {
-  background-color: $snow;
+  //background: $degree-bg;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   flex-wrap: wrap;
   z-index: 0;
+  &:before {
+    background: $degree-bg;
+    filter: blur(1.17rem);
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+//Card
+.card {
+  background: $degree-card;
+  border: 0.5rem solid rgba($snow, 0.3);
+  border-radius: 4rem;
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin: auto;
+  height: 62.7rem;
+  width: 46.6rem;
+  position: relative;
+  z-index: 1;
 }

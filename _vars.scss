@@ -3,7 +3,7 @@ $semibold: 600;
 $regular: 400;
 
 //--Family
-$font-primary: "Montserrat", sans-serif;
+$font-primary: "League Spartan", sans-serif;
 
 //--Size
 $small-size: 2.2rem;
@@ -11,7 +11,20 @@ $medium-size: 2.4rem;
 $regular-size: 2rem;
 $title: 4rem;
 
-
 //Colors
-$snow: #ffffff
+$snow: #ffffff;
+$degree-bg: linear-gradient(
+  144deg,
+  rgba(166, 174, 255, 1) 27%,
+  rgba(238, 122, 97, 1) 46%,
+  rgba(252, 238, 123, 1) 62%,
+  rgba(161, 252, 225, 1) 89%
+);
 
+$degree-bg-callback: rgb(166, 174, 255);
+
+$degree-card: linear-gradient(
+  0deg,
+  rgba(255, 255, 255, 0.3) 0%,
+  rgba(255, 255, 255, 0.3) 100%
+);
