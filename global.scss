@@ -82,10 +82,12 @@ select {
   border: 0.5rem solid rgba($snow, 0.3);
   border-radius: 4rem;
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2);
+  stroke: rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding: 3.2rem 3.2rem 4.6rem 3.2rem;
   height: 62.7rem;
   width: 46.6rem;
   position: relative;
@@ -112,4 +114,105 @@ select {
       width: 20rem;
     }
   }
+
+  &__top {
+    margin: 3rem auto;
+  }
+
+  &__title {
+    @extend .textUI;
+    font-size: $title;
+    font-weight: $semibold;
+  }
+  &__subtitle {
+    @extend .textUI;
+    font-size: $regular-size;
+    font-weight: $regular;
+  }
+
+  &__abstract {
+    margin: 3.2rem auto;
+    @extend .textUI;
+    font-size: $small-size;
+    font-weight: $semibold;
+    line-height: 2.6rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.8rem auto;
+    width: 100%;
+    height: auto;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: 0.3rem solid $snow;
+    border-radius: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 5rem;
+    text-align: center;
+    font-size: $regular-size;
+    font-weight: $semibold;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 2.4rem auto 1.8rem auto;
+    list-style-type: none;
+    height: 2rem;
+    width: 16.4rem;
+    &-item {
+      background-size: contain;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      width: 2rem;
+      & > a {
+        display: block;
+        width: 100%;
+      }
+      &.in {
+        & > a {
+          height: 2rem;
+          @include icon("in");
+        }
+      }
+      &.md {
+        & > a {
+          height: 1.7rem;
+          @include icon("md");
+        }
+      }
+      &.tw {
+        & > a {
+          height: 1.8rem;
+          @include icon("tw");
+        }
+      }
+      &.bh {
+        & > a {
+          height: 1.3rem;
+          @include icon("bh");
+        }
+      }
+    }
+  }
+}
+
+.textUI {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  text-align: center;
 }
