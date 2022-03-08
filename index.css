@@ -420,8 +420,8 @@ select {
 }
 .space:before {
   background: linear-gradient(144deg, #a6aeff 27%, #ee7a61 46%, #fcee7b 62%, #a1fce1 89%);
-  -webkit-filter: blur(1.17rem);
-          filter: blur(1.17rem);
+  -webkit-filter: blur(10rem);
+          filter: blur(10rem);
   content: "";
   display: block;
   height: 100%;
@@ -433,8 +433,6 @@ select {
 }
 
 .card {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
   border: 0.5rem solid rgba(255, 255, 255, 0.3);
   border-radius: 4rem;
   -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2);
@@ -455,6 +453,19 @@ select {
   width: 46.6rem;
   position: relative;
   z-index: 1;
+}
+.card:after {
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(1.17rem);
+          filter: blur(1.17rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .card__avatar {
   background-color: #ffffff;
@@ -482,6 +493,12 @@ select {
 }
 .card__top {
   margin: 3rem auto;
+  position: relative;
+  z-index: 3;
+}
+.card__bottom {
+  position: relative;
+  z-index: 3;
 }
 .card__title {
   font-size: 4rem;

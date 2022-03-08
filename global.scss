@@ -64,7 +64,7 @@ select {
   z-index: 0;
   &:before {
     background: $degree-bg;
-    filter: blur(1.17rem);
+    filter: blur(10rem);
     content: "";
     display: block;
     height: 100%;
@@ -78,7 +78,6 @@ select {
 
 //Card
 .card {
-  background: $degree-card;
   border: 0.5rem solid rgba($snow, 0.3);
   border-radius: 4rem;
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2);
@@ -92,6 +91,17 @@ select {
   width: 46.6rem;
   position: relative;
   z-index: 1;
+  &:after {
+    content: "";
+    background: $degree-card;
+    width: 100%;
+    height: 100%;
+    filter: blur(1.17rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
 
   &__avatar {
     background-color: $snow;
@@ -117,6 +127,13 @@ select {
 
   &__top {
     margin: 3rem auto;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 3;
   }
 
   &__title {
@@ -158,7 +175,7 @@ select {
     text-align: center;
     font-size: $regular-size;
     font-weight: $semibold;
-    &:hover{
+    &:hover {
       background-color: $snow;
       color: $beige;
       cursor: pointer;
