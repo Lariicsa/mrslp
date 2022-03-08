@@ -527,6 +527,11 @@ select {
   font-size: 2rem;
   font-weight: 600;
 }
+.card__button:hover {
+  background-color: #ffffff;
+  color: #fbf9f6;
+  cursor: pointer;
+}
 .card__social {
   display: -webkit-box;
   display: -ms-flexbox;

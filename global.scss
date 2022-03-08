@@ -158,6 +158,11 @@ select {
     text-align: center;
     font-size: $regular-size;
     font-weight: $semibold;
+    &:hover{
+      background-color: $snow;
+      color: $beige;
+      cursor: pointer;
+    }
   }
 
   &__social {
