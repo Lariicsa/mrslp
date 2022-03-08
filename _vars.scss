@@ -13,7 +13,10 @@ $title: 4rem;
 
 //Colors
 $beige: #fbf9f6;
+$text-hover: #bbc8db;
 $snow: #ffffff;
+$orange: #ee7a61;
+$yellow: #fcee7b;
 $degree-bg: linear-gradient(
   144deg,
   rgba(166, 174, 255, 1) 27%,
@@ -23,9 +26,13 @@ $degree-bg: linear-gradient(
 );
 
 $degree-bg-callback: rgb(166, 174, 255);
-
 $degree-card: linear-gradient(
   0deg,
   rgba(255, 255, 255, 0.3) 0%,
   rgba(255, 255, 255, 0.3) 100%
+);
+$degree-purple-mint: linear-gradient(
+  146deg,
+  rgba(166, 174, 255, 1) 56%,
+  rgba(161, 252, 225, 1) 100%
 );
