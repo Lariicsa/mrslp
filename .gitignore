@@ -1,9 +1,7 @@
 
 .DS_Store
 *.scss
-
 _mixins.scss
-
 _vars.scss
 global.scss
 index.scss
