@@ -71,6 +71,8 @@ select {
     display: block;
     height: 40vw;
     width: 40vw;
+    min-width: 40rem;
+    min-height: 40rem;
     position: absolute;
     z-index: 1;
   }
@@ -102,6 +104,10 @@ select {
   width: 46.6rem;
   position: relative;
   z-index: 3;
+
+  @include mobile {
+    width: 36rem;
+  }
   &:after {
     content: "";
     background: $degree-card;
@@ -122,6 +128,10 @@ select {
     height: 18rem;
     width: 18rem;
     position: relative;
+    @include mobile {
+      height: 16rem;
+      width: 16rem;
+    }
     &-pic {
       background-image: url("./assets/mrs-pic.png");
       background-repeat: no-repeat;
@@ -133,6 +143,11 @@ select {
       left: 0;
       height: 20rem;
       width: 20rem;
+      @include mobile {
+        clip-path: ellipse(8rem 10rem at 8rem 8rem);
+        height: 18.6rem;
+        width: 16rem;
+      }
     }
   }
 
@@ -187,6 +202,9 @@ select {
     font-size: $regular-size;
     font-weight: $semibold;
     transition: all 200ms ease-out;
+    @include mobile {
+      width: 14rem;
+    }
     &:hover {
       background-color: $snow;
       color: $text-hover;

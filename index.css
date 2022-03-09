@@ -427,6 +427,8 @@ select {
   display: block;
   height: 40vw;
   width: 40vw;
+  min-width: 40rem;
+  min-height: 40rem;
   position: absolute;
   z-index: 1;
 }
@@ -463,6 +465,11 @@ select {
   position: relative;
   z-index: 3;
 }
+@media screen and (max-width: 469px) {
+  .card {
+    width: 36rem;
+  }
+}
 .card:after {
   content: "";
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3)));
@@ -487,6 +494,12 @@ select {
   width: 18rem;
   position: relative;
 }
+@media screen and (max-width: 469px) {
+  .card__avatar {
+    height: 16rem;
+    width: 16rem;
+  }
+}
 .card__avatar-pic {
   background-image: url("./assets/mrs-pic.png");
   background-repeat: no-repeat;
@@ -499,6 +512,14 @@ select {
   left: 0;
   height: 20rem;
   width: 20rem;
+}
+@media screen and (max-width: 469px) {
+  .card__avatar-pic {
+    -webkit-clip-path: ellipse(8rem 10rem at 8rem 8rem);
+            clip-path: ellipse(8rem 10rem at 8rem 8rem);
+    height: 18.6rem;
+    width: 16rem;
+  }
 }
 .card__top {
   margin: 3rem auto;
@@ -554,6 +575,11 @@ select {
   font-weight: 600;
   -webkit-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
+}
+@media screen and (max-width: 469px) {
+  .card__button {
+    width: 14rem;
+  }
 }
 .card__button:hover {
   background-color: #ffffff;
